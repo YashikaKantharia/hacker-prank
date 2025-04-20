@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        video.bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:rgb(68, 255, 0);
+            text-align: center;
+        }
+
+        .static-text {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .moving-text-wrapper {
+            width: 100vw;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 10px 0;
+        }
+
+        .moving-text {
+            display: inline-block;
+            font-size: 16px;
+            animation: scrollLeft 11s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop class="bg-video">
+        <source src="whatsappvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Text Content -->
+    <div class="content">
+        <div class="static-text">Hacked by /.RUDRA #$ UVIRUS</div>
+        <div class="moving-text-wrapper">
+            <div class="moving-text"><ul> WAS HERE, YOUR SECURITY IS TOO WEAK! - contact{uviruss@proton.me}</ul></div>
+        </div>
+        <div class="static-text">Greetz : UNKNOWN VIRUS - INFI CYBER</div>
+    </div>
+
+</body>
+</html>
